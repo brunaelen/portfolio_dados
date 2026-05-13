@@ -1,35 +1,234 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Portfólio de Dados - Bruna</title>
-</head>
-<body style="font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px;">
+export default function Portfolio() {
+  const projects = [
+    {
+      title: 'Dashboard Institucional - Qlik Sense',
+      description:
+        'Participação no desenvolvimento e manutenção de dashboards institucionais com foco em indicadores e visualização de dados.',
+      tech: ['Qlik Sense', 'BI', 'Dashboards'],
+      image:
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+      link: '#',
+    },
+    {
+      title: 'Análise de Dados SRAG',
+      description:
+        'Projeto de análise e tratamento de dados epidemiológicos utilizando Python e Pandas.',
+      tech: ['Python', 'Pandas', 'Jupyter'],
+      image:
+        'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop',
+      link: '#',
+    },
+    {
+      title: 'Dashboard Power BI',
+      description:
+        'Dashboard interativo para análise de métricas e indicadores com foco em visualização de dados.',
+      tech: ['Power BI', 'DAX', 'Power Query'],
+      image:
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+      link: '#',
+    },
+  ];
 
-  <h1>🌟 Portfólio de Dados - Bruna Nascimento</h1>
+  return (
+    <div className="min-h-screen bg-zinc-950 text-zinc-100">
+      <header className="border-b border-zinc-800 backdrop-blur sticky top-0 bg-zinc-950/80 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold tracking-tight">Bruna Nascimento</h1>
 
-  <p>Olá! Eu sou apaixonada por análise de dados e visualização. Aqui você encontra alguns painéis interativos que desenvolvi com Power BI, Qlik Sense e outras ferramentas.</p>
+          <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
+            <a href="#about" className="hover:text-white transition-colors">
+              Sobre
+            </a>
+            <a href="#projects" className="hover:text-white transition-colors">
+              Projetos
+            </a>
+            <a href="#skills" className="hover:text-white transition-colors">
+              Skills
+            </a>
+            <a href="#contact" className="hover:text-white transition-colors">
+              Contato
+            </a>
+          </nav>
+        </div>
+      </header>
 
-  <h2>📊 Projetos em Destaque</h2>
+      <main>
+        <section className="max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <span className="bg-zinc-800 text-zinc-300 px-4 py-2 rounded-full text-sm inline-block mb-6">
+              Ciência de Dados • BI • Analytics
+            </span>
 
-  <ul>
-    <li>
-      <strong>📈 Painel: Desigualdade Social no Brasil</strong><br>
-      <a href="https://seu-link-do-painel" target="_blank">Clique para visualizar</a><br>
-      <em>Ferramenta: Power BI | Dados: IBGE</em>
-    </li><br>
-    <li>
-      <strong>💉 Painel: Evolução da Vacinação</strong><br>
-      <a href="https://seu-link-do-outro-painel" target="_blank">Clique para visualizar</a><br>
-      <em>Ferramenta: Qlik Sense | Dados: DataSUS</em>
-    </li>
-  </ul>
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Portfólio de Dados & Business Intelligence
+            </h2>
 
-  <h2>📬 Contato</h2>
-  <p>
-    💼 <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a><br>
-    📧 bruna@email.com
-  </p>
+            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+              Estudante de Ciência da Computação com experiência em Business Intelligence,
+              análise de dados e desenvolvimento de dashboards utilizando Qlik Sense,
+              Power BI e Python.
+            </p>
 
-</body>
-</html>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="bg-white text-black px-6 py-3 rounded-2xl font-medium hover:scale-105 transition-transform"
+              >
+                Ver Projetos
+              </a>
+
+              <a
+                href="https://github.com/"
+                target="_blank"
+                className="border border-zinc-700 px-6 py-3 rounded-2xl font-medium hover:bg-zinc-900 transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-700 to-zinc-900 blur-3xl opacity-30 rounded-full" />
+
+            <div className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-zinc-800 rounded-2xl p-5">
+                  <h3 className="text-3xl font-bold mb-2">3+</h3>
+                  <p className="text-zinc-400 text-sm">Projetos em desenvolvimento</p>
+                </div>
+
+                <div className="bg-zinc-800 rounded-2xl p-5">
+                  <h3 className="text-3xl font-bold mb-2">BI</h3>
+                  <p className="text-zinc-400 text-sm">Experiência corporativa</p>
+                </div>
+
+                <div className="bg-zinc-800 rounded-2xl p-5 col-span-2">
+                  <h3 className="text-xl font-semibold mb-3">Tecnologias</h3>
+
+                  <div className="flex flex-wrap gap-2">
+                    {['Python', 'Pandas', 'SQL', 'Power BI', 'Qlik Sense', 'NumPy'].map(
+                      (item) => (
+                        <span
+                          key={item}
+                          className="bg-zinc-700 text-sm px-3 py-1 rounded-full"
+                        >
+                          {item}
+                        </span>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
+          <div className="mb-14">
+            <h2 className="text-4xl font-bold mb-4">Projetos</h2>
+            <p className="text-zinc-400 text-lg">
+              Alguns projetos e estudos envolvendo análise de dados, dashboards e BI.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:-translate-y-2 transition-transform duration-300"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-52 w-full object-cover"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
+
+                  <p className="text-zinc-400 leading-relaxed mb-5">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-zinc-800 text-sm px-3 py-1 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 text-white hover:gap-3 transition-all"
+                  >
+                    Ver Projeto →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+            <h2 className="text-4xl font-bold mb-10">Habilidades</h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Data Analysis</h3>
+                <ul className="space-y-3 text-zinc-400">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>NumPy</li>
+                  <li>Jupyter Notebook</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Business Intelligence</h3>
+                <ul className="space-y-3 text-zinc-400">
+                  <li>Power BI</li>
+                  <li>Qlik Sense</li>
+                  <li>Dashboards</li>
+                  <li>KPIs</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Banco de Dados</h3>
+                <ul className="space-y-3 text-zinc-400">
+                  <li>SQL</li>
+                  <li>PostgreSQL</li>
+                  <li>Consultas</li>
+                  <li>Manipulação de Dados</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        id="contact"
+        className="border-t border-zinc-800 mt-20 py-10 text-center text-zinc-500"
+      >
+        <p className="mb-4">Bruna Nascimento • Ciência de Dados & BI</p>
+
+        <div className="flex justify-center gap-6">
+          <a href="https://github.com/" target="_blank" className="hover:text-white">
+            GitHub
+          </a>
+
+          <a href="https://linkedin.com/" target="_blank" className="hover:text-white">
+            LinkedIn
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
